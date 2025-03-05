@@ -22,7 +22,8 @@ add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
 		src/window.c
 		src/util/util.c
 		src/util/util.h
-		src/window.h)
+		src/window.h
+		src/ecs.h)
 
 
 # Find the Required Packages (if Any -> OpenGL/Vulkan or Any)
