@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include "window.h"
+#include "ecs.h"
 
 void processInput(GLFWwindow *window);
 void render_loop();
@@ -11,6 +12,9 @@ const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
 
 int main() {
+    add_component(0,COMPONENT_POSITION,sizeof(CPosition));
+    get_component(0);
+
 	GLFWwindow* window = create_window(SCR_WIDTH,SCR_HEIGHT);
 
 	while (!glfwWindowShouldClose(window)) {
