@@ -18,14 +18,14 @@ file(GLOB_RECURSE HEADER_FILES
 )
 
 add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
-		src/ecs.c
 		src/window.c
 		src/util/util.c
 		src/util/util.h
 		src/window.h
-		src/ecs.h
 		src/util/types.h
-        src/util/uthash.h)
+        src/util/uthash.h
+		src/util/ecs.h
+        src/game.c)
 
 
 # Find the Required Packages (if Any -> OpenGL/Vulkan or Any)
