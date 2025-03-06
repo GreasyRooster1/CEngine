@@ -20,9 +20,30 @@ typedef enum {
 
 typedef int Entity;
 
-struct CPosition{
+typedef struct {
+    Entity e;
+}CGeneric;
+
+typedef struct {
+    Entity e;
     f32 x;
     f32 y;
+} CPosition;
+typedef struct {
+    Entity e;
+    f32 x;
+    f32 y;
+}CVelocity;
+
+enum ComponentType{
+    COMPONENT_POSITION,
+    COMPONENT_VELOCITY,
 };
+
+CGeneric* add_component(Entity e,enum ComponentType type,int size){
+    CGeneric *comp = malloc(size);
+    comp->e=e;
+    return comp;
+}
 
 #endif //CENGINE_ECS_H
