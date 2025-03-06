@@ -19,8 +19,6 @@ void start_game(){
     }
 }
 
-void c
-
 void update(){
     if (update)
     {
