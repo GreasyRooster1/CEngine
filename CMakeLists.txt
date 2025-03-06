@@ -25,7 +25,14 @@ add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
 		src/util/types.h
         src/util/uthash.h
 		src/util/ecs.h
-        src/game.c)
+        src/game.c
+		src/renderer/renderer.c
+		src/renderer/renderer.h
+		src/game/gameutil.c
+		src/game/gameutil.h
+		src/game.h
+		src/game/gamestate.c
+		src/game/gamestate.h)
 
 
 # Find the Required Packages (if Any -> OpenGL/Vulkan or Any)
