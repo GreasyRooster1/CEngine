@@ -5,7 +5,8 @@
 #ifndef CENGINE_UTIL_H
 #define CENGINE_UTIL_H
 
-
+#include "types.h"
+#include "uthash.h"
 #include <process.h>
 
 void die(int exit_code);

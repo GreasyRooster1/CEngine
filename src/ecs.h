@@ -5,6 +5,8 @@
 #ifndef CENGINE_ECS_H
 #define CENGINE_ECS_H
 
+#include "util/util.h"
+
 #define MAX_ENTITIES 100
 
 struct Ecs{
@@ -19,7 +21,8 @@ typedef enum {
 typedef int Entity;
 
 struct CPosition{
-
+    f32 x;
+    f32 y;
 };
 
 #endif //CENGINE_ECS_H
