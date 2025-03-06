@@ -40,10 +40,7 @@ enum ComponentType{
     COMPONENT_VELOCITY,
 };
 
-CGeneric* add_component(Entity e,enum ComponentType type,int size){
-    CGeneric *comp = malloc(size);
-    comp->e=e;
-    return comp;
-}
+CGeneric* add_component(Entity e,enum ComponentType type,int size);
+
 
 #endif //CENGINE_ECS_H
