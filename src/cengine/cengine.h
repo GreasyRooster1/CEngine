@@ -5,11 +5,8 @@
 #ifndef CENGINE_MASTER_H
 #define CENGINE_MASTER_H
 
-#include "game/ecs.h"
-#include "renderer/renderer.h"
-#include "util/util.h"
-#include "game/gamesetup.h"
-#include "game/gamestate.h"
-#include "renderer/window.h"
+#include "game/prelude.h"
+#include "renderer/prelude.h"
+#include "util/prelude.h"
 
 #endif //CENGINE_MASTER_H

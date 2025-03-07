@@ -19,8 +19,8 @@ file(GLOB_RECURSE HEADER_FILES
 
 add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
 		src/cengine/renderer/window.c
-		src/cengine/util/util.c
-		src/cengine/util/util.h
+		src/cengine/util/prelude.c
+		src/cengine/util/prelude.h
 		src/cengine/renderer/window.h
 		src/cengine/util/types.h
 		src/cengine/util/uthash.h
@@ -36,6 +36,10 @@ add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
 		src/cengine/game/ecstypes.h
 		src/cengine/game/input.c
 		src/cengine/game/input.h
+		src/game/player.c
+		src/game/player.h
+		src/cengine/game/prelude.h
+		src/cengine/renderer/prelude.h
 )
 
 

@@ -8,6 +8,31 @@
 #include "cengine/cengine.h"
 #include "cengine/game/gamestate.h"
 
+typedef struct
+{
+    float x, y;
+} CPosition;
+
+typedef struct
+{
+    float dx, dy;
+} CVelocity;
+
+typedef struct
+{
+    u32 gl_id;
+    float rotation;
+} CSprite;
+
+typedef enum
+{
+    COMPONENT_POSITION,
+    COMPONENT_VELOCITY,
+    COMPONENT_SPRITE,
+    COMPONENT_PLAYER,
+
+    COMPONENT_COUNT
+} ComponentType;
 
 void setup(GameState *state);
 void update(GameState *state);

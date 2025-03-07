@@ -3,31 +3,8 @@
 //
 #define ECS_IMPLEMENTATION
 #include "cengine/cengine.h"
+#include "game/player.h"
 
-typedef struct
-{
-    float x, y;
-} CPosition;
-
-typedef struct
-{
-    float dx, dy;
-} CVelocity;
-
-typedef struct
-{
-    u32 gl_id;
-    float rotation;
-} CSprite;
-
-typedef enum
-{
-    COMPONENT_POSITION,
-    COMPONENT_VELOCITY,
-    COMPONENT_SPRITE,
-
-    COMPONENT_COUNT
-} ComponentType;
 
 #define MOVEMENT_SYSTEM_MASK \
 ECS_MASK(2, COMPONENT_POSITION, COMPONENT_VELOCITY)
@@ -68,6 +45,8 @@ void register_components(Ecs *ecs){
     ecs_register_component(ecs, COMPONENT_POSITION, 1000, sizeof(CPosition), NULL);
     ecs_register_component(ecs, COMPONENT_VELOCITY, 200, sizeof(CVelocity), NULL);
     ecs_register_component(ecs, COMPONENT_SPRITE, 1000, sizeof(CSprite), NULL);
+    ecs_register_component(ecs, COMPONENT_PLAYER, 1, sizeof(CPlayer), NULL);
+
 }
 
 void register_systems(Ecs *ecs){
