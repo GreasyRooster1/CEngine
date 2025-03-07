@@ -15,8 +15,7 @@ void player_move_system(Ecs *ecs,GameState *state){
         {
             CPosition *pos = ecs_ent_get_component(ecs, e, COMPONENT_POSITION);
 
-            if(check_key_pressed(state,GLFW_KEY_W,GLFW_PRESS)){
-                printf("%s","w");
+            if(check_key_pressed(state,GLFW_KEY_W)){
                 pos->y-=3;
             }
         }
