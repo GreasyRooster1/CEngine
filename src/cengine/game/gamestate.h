@@ -10,7 +10,7 @@
 #include "GLFW/glfw3.h"
 
 typedef struct {
-    int keys[GLFW_KEY_LAST];
+    int keys[GLFW_KEY_LAST+1];
 } InputState;
 
 typedef struct{

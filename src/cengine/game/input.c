@@ -2,6 +2,7 @@
 // Created by dillo on 3/7/2025.
 //
 
+#include <malloc.h>
 #include "input.h"
 #include "gamestate.h"
 
@@ -15,4 +16,8 @@ bool check_key_pressed(GameState *state,int code, int action){
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods){
 
+}
+InputState* create_input_state(){
+    InputState *state = malloc(sizeof(InputState));
+    return state;
 }

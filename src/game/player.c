@@ -14,11 +14,22 @@ void player_move_system(Ecs *ecs,GameState *state){
         if (ecs_ent_has_mask(ecs, e, PLAYER_MOVE_SYSTEM_MASK))
         {
             CPosition *pos = ecs_ent_get_component(ecs, e, COMPONENT_POSITION);
-            printf("%s","w");
+
             if(check_key_pressed(state,GLFW_KEY_W,GLFW_PRESS)){
                 printf("%s","w");
                 pos->y-=3;
             }
         }
     }
+}
+
+EcsEnt new_player_arch(GameState *state){
+    EcsEnt entity = ecs_ent_make(state->ecs);
+    CPlayer cPlayer = {};
+    CPosition cPosition = {0,0};
+    CSprite cSprite = {0,0};
+    ecs_ent_add_component(state->ecs,entity,COMPONENT_PLAYER,&cPlayer);
+    ecs_ent_add_component(state->ecs,entity,COMPONENT_POSITION,&cPosition);
+    ecs_ent_add_component(state->ecs,entity,COMPONENT_SPRITE,&cSprite);
+    return entity;
 }

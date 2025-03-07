@@ -12,4 +12,6 @@ bool check_key_pressed(GameState *state,int code, int action);
 
 void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 
+InputState* create_input_state();
+
 #endif //CENGINE_INPUT_H

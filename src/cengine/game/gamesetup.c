@@ -16,7 +16,7 @@ void process_input(GLFWwindow *window);
 void start_game(){
     setup_renderer();
     GameState state = {
-            true,true,NULL,NULL,
+            true,true,NULL,NULL,create_input_state()
     };
 
     setup(&state);
