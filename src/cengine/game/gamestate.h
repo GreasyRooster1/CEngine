@@ -8,7 +8,10 @@
 #include <stdbool.h>
 #include "ecs.h"
 #include "GLFW/glfw3.h"
-#include "input.h"
+
+typedef struct {
+    int keys[GLFW_KEY_LAST];
+} InputState;
 
 typedef struct{
     bool updating;
