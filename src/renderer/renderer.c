@@ -3,4 +3,8 @@
 //
 
 #include "renderer.h"
+#include "GLFW/glfw3.h"
 
+void cleanup_renderer(){
+    glfwTerminate();
+}

@@ -1,9 +1,7 @@
 //
 // Created by dillo on 3/6/2025.
 //
-#define ECS_IMPLEMENTATION
-#include "util/util.h"
-#include "game/gamestate.h"
+#include "cengine.h"
 
 typedef struct
 {

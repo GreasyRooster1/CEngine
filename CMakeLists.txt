@@ -32,7 +32,8 @@ add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
         src/game/gamesetup.h
 		src/game.h
 		src/game/gamestate.c
-		src/game/gamestate.h)
+		src/game/gamestate.h
+		src/cengine.h)
 
 
 # Find the Required Packages (if Any -> OpenGL/Vulkan or Any)

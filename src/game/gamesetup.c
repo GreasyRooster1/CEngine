@@ -6,7 +6,7 @@
 #include "gamesetup.h"
 #include "../util/util.h"
 #include "gamestate.h"
-
+#include "../renderer/renderer.h"
 
 
 void start_game(){
@@ -41,4 +41,8 @@ void update(GameState *state){
     {
         ecs_run_systems(state->ecs, ECS_SYSTEM_RENDER);
     }
+}
+
+void cleanup_game(){
+    cleanup_renderer()
 }

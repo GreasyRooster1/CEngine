@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-#include "util/util.h"
+#include "cengine.h"
 #include "window.h"
 
 GLFWwindow * create_window(int width, int height){

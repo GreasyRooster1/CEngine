@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 #include "window.h"
-#include "game/gamesetup.h"
+#include "cengine.h"
 
 void processInput(GLFWwindow *window);
 void render_loop();
