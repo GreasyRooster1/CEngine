@@ -7,10 +7,11 @@
 #include "gamestate.h"
 #include "../renderer/renderer.h"
 #include "../renderer/window.h"
+#include "input.h"
 
-
-void main_loop(GameState *state);
 void check_state(GameState *state);
+void cleanup_game(GameState *state);
+void process_input(GLFWwindow *window);
 
 void start_game(){
     setup_renderer();
@@ -21,6 +22,7 @@ void start_game(){
     setup(&state);
     check_state(&state);
 
+    glfwSetKeyCallback(state.window, key_callback);
     while(is_window_alive(state.window)) {
         clear_window();
 
@@ -28,7 +30,14 @@ void start_game(){
             pre_loop(&state);
         #endif
 
-        main_loop(&state);
+        if (state.updating)
+        {
+            ecs_run_systems(state.ecs, ECS_SYSTEM_UPDATE);
+        }
+        if (state.rendering)
+        {
+            ecs_run_systems(state.ecs, ECS_SYSTEM_RENDER);
+        }
 
         #ifdef GAME_POSTLOOP
             pre_loop(&state);
@@ -37,6 +46,8 @@ void start_game(){
         glfwSwapBuffers(state.window);
         glfwPollEvents();
     }
+
+    cleanup_game(&state);
 }
 
 void check_state(GameState *state){
@@ -50,21 +61,6 @@ void check_state(GameState *state){
     }
 }
 
-void main_loop(GameState *state){
-    if (state->updating)
-    {
-        ecs_run_systems(state->ecs, ECS_SYSTEM_UPDATE);
-    }
-    if (state->rendering)
-    {
-        ecs_run_systems(state->ecs, ECS_SYSTEM_RENDER);
-    }
-}
-
-void cleanup_game(){
+void cleanup_game(GameState *state){
     cleanup_renderer();
-}
-
-void process_input(){
-
 }

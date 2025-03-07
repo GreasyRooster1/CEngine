@@ -31,10 +31,12 @@ add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
 		src/cengine/game/gamesetup.c
 		src/cengine/game/gamesetup.h
 		src/game.h
-		src/cengine/game/gamestate.c
 		src/cengine/game/gamestate.h
 		src/cengine/cengine.h
-		src/cengine/game/ecstypes.h)
+		src/cengine/game/ecstypes.h
+		src/cengine/game/input.c
+		src/cengine/game/input.h
+)
 
 
 # Find the Required Packages (if Any -> OpenGL/Vulkan or Any)

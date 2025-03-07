@@ -12,9 +12,9 @@
 void setup(GameState *state);
 void update(GameState *state);
 
-#define GAME_PRELOOP
-void pre_loop(GameState *state);
-#define GAME_POSTLOOP
-void post_loop(GameState *state);
+//#define GAME_PRELOOP
+//void pre_loop(GameState *state);
+//#define GAME_POSTLOOP
+//void post_loop(GameState *state);
 
 #endif //CENGINE_GAME_H
