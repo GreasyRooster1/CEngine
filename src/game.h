@@ -6,6 +6,7 @@
 #define CENGINE_GAME_H
 
 #include "cengine/cengine.h"
+#include "cengine/game/gamestate.h"
 
 
 void setup(GameState *state);
