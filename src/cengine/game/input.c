@@ -7,16 +7,15 @@
 #include "gamestate.h"
 
 
-bool check_key_pressed(GameState *state,int code, int action){
-    if(code>GLFW_KEY_LAST){
-        return false;
-    }
-    return state->inputState->keys[code]==action;
+bool check_key_pressed(GameState *state,int code){
+    return check_key_state(state,code,GLFW_PRESS);
 }
 
-void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods){
-
+bool check_key_state(GameState *state,int code, int action){
+    int keyState = glfwGetKey(state->window, code);
+    return keyState == action;
 }
+
 InputState* create_input_state(){
     InputState *state = malloc(sizeof(InputState));
     return state;

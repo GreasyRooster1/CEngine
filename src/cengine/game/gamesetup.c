@@ -22,7 +22,6 @@ void start_game(){
     setup(&state);
     check_state(&state);
 
-    glfwSetKeyCallback(state.window, key_callback);
     while(is_window_alive(state.window)) {
         clear_window();
 
