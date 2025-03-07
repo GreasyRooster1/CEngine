@@ -91,6 +91,7 @@ void setup(GameState *state){
     ecs_ent_add_component(ecs, e, COMPONENT_VELOCITY, &velocity);
 
     state->ecs = ecs;
+    state->window = create_window(SCR_WIDTH,SCR_HEIGHT);
 }
 
 void update(GameState *state){

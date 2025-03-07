@@ -10,5 +10,6 @@
 #include "util/util.h"
 #include "game/gamesetup.h"
 #include "game/gamestate.h"
+#include "renderer/window.h"
 
 #endif //CENGINE_MASTER_H

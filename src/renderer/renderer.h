@@ -9,5 +9,7 @@
 
 void cleanup_renderer();
 bool is_window_alive(GLFWwindow *window);
+void setup_renderer();
+void clear_window();
 
 #endif //CENGINE_RENDERER_H

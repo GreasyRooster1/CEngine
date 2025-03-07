@@ -13,15 +13,11 @@ const unsigned int SCR_HEIGHT = 600;
 
 int main() {
 
-	GLFWwindow* window = create_window(SCR_WIDTH,SCR_HEIGHT);
-
     start_game();
 
 	while () {
 		processInput(window);
 
-		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
-		glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
         render_loop();
 
@@ -29,7 +25,6 @@ int main() {
 		glfwPollEvents();
 	}
 
-	glfwTerminate();
 	return 0;
 }
 

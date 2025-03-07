@@ -6,13 +6,15 @@
 #include "gamesetup.h"
 #include "gamestate.h"
 #include "../renderer/renderer.h"
+#include "../renderer/window.h"
 
 
 void main_loop(GameState *state);
 
 void start_game(){
+    setup_renderer();
     GameState state = {
-            true,true,NULL
+            true,true,NULL,create_window(),
     };
     setup(&state);
 
@@ -20,7 +22,7 @@ void start_game(){
         printf("%s","ECS not passed to GameState... did you forget to initialize?");
     }
 
-    while(1) {
+    while(is_window_alive(state.window)) {
         #ifdef GAME_PRELOOP
             pre_loop(&state);
         #endif
@@ -44,4 +46,8 @@ void main_loop(GameState *state){
 
 void cleanup_game(){
     cleanup_renderer();
+}
+
+void process_input(){
+
 }

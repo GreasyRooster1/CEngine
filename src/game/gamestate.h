@@ -7,11 +7,13 @@
 
 #include <stdbool.h>
 #include "ecs.h"
+#include "GLFW/glfw3.h"
 
 typedef struct{
     bool updating;
     bool rendering;
     Ecs *ecs;
+    GLFWwindow *window;
 } GameState;
 
 #endif //CENGINE_GAMESTATE_H
