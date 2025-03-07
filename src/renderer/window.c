@@ -3,9 +3,9 @@
 //
 
 #include <stdio.h>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-#include "cengine.h"
+#include "glad.h"
+#include "GLFW/glfw3.h"
+#include "../cengine.h"
 #include "window.h"
 
 GLFWwindow * create_window(int width, int height){

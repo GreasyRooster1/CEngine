@@ -2,7 +2,7 @@
 #include <GLFW/glfw3.h>
 
 #include <stdio.h>
-#include "window.h"
+#include "renderer/window.h"
 #include "cengine.h"
 
 void processInput(GLFWwindow *window);

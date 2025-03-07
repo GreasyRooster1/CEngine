@@ -18,10 +18,10 @@ file(GLOB_RECURSE HEADER_FILES
 )
 
 add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
-		src/window.c
+		src/renderer/window.c
 		src/util/util.c
 		src/util/util.h
-		src/window.h
+		src/renderer/window.h
 		src/util/types.h
         src/util/uthash.h
 		src/game/ecs.h
