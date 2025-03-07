@@ -11,6 +11,6 @@ typedef struct{
 
 }CPlayer;
 
-void player_move_system(Ecs *ecs);
+void player_move_system(Ecs *ecs,GameState *state);
 
 #endif //CENGINE_PLAYER_H

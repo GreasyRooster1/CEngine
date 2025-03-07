@@ -6,7 +6,7 @@
 #define CENGINE_GAMESTATE_H
 
 #include <stdbool.h>
-#include "ecs.h"
+#include "ecstypes.h"
 #include "GLFW/glfw3.h"
 
 typedef struct {

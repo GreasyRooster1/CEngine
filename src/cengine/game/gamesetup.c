@@ -32,11 +32,11 @@ void start_game(){
 
         if (state.updating)
         {
-            ecs_run_systems(state.ecs, ECS_SYSTEM_UPDATE);
+            ecs_run_systems(state.ecs, ECS_SYSTEM_UPDATE,&state);
         }
         if (state.rendering)
         {
-            ecs_run_systems(state.ecs, ECS_SYSTEM_RENDER);
+            ecs_run_systems(state.ecs, ECS_SYSTEM_RENDER,&state);
         }
 
         #ifdef GAME_POSTLOOP

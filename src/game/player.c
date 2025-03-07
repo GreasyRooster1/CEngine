@@ -7,7 +7,7 @@
 
 #define PLAYER_MOVE_SYSTEM_MASK \
 ECS_MASK(2, COMPONENT_PLAYER, COMPONENT_POSITION)
-void player_move_system(Ecs *ecs){
+void player_move_system(Ecs *ecs,GameState *state){
     for (u32 i = 0; i < ecs_for_count(ecs); i++)
     {
         EcsEnt e = ecs_get_ent(ecs, i);
@@ -15,7 +15,9 @@ void player_move_system(Ecs *ecs){
         {
             CPosition *pos = ecs_ent_get_component(ecs, e, COMPONENT_POSITION);
 
-            check_key_pressed();
+            if(check_key_pressed(state,GLFW_KEY_W,GLFW_PRESS)){
+                pos->y-=3;
+            }
         }
     }
 }

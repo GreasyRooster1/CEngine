@@ -7,6 +7,7 @@
 
 #include "cengine/cengine.h"
 #include "cengine/game/gamestate.h"
+#include "cengine/util/types.h"
 
 typedef struct
 {

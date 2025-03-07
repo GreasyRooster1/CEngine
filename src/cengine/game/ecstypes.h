@@ -5,6 +5,7 @@
 #ifndef CENGINE_ECSTYPES_H
 #define CENGINE_ECSTYPES_H
 
+
 typedef uint64_t EcsEnt;
 typedef uint32_t EcsComponentType;
 
@@ -19,7 +20,6 @@ typedef enum
 
 typedef struct Ecs Ecs;
 
-typedef void (*ecs_system_func)(struct Ecs *ecs);
 typedef void (*ecs_component_destroy)(void *data);
 
 #endif //CENGINE_ECSTYPES_H

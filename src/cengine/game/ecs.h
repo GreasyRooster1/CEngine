@@ -27,7 +27,9 @@
 #endif
 
 #include "ecstypes.h"
+#include "gamestate.h"
 
+typedef void (*ecs_system_func)(struct Ecs *ecs,GameState *state);
 ECSDEF Ecs*      ecs_make(uint32_t max_entities, uint32_t component_count, uint32_t system_count);
 ECSDEF void      ecs_destroy(Ecs *ecs);
 ECSDEF void      ecs_register_component(Ecs *ecs,
@@ -35,8 +37,8 @@ ECSDEF void      ecs_register_component(Ecs *ecs,
                                         uint32_t count, uint32_t size,
                                         ecs_component_destroy destroy_func);
 ECSDEF void      ecs_register_system(Ecs *ecs, ecs_system_func func, EcsSystemType type);
-ECSDEF void      ecs_run_systems(Ecs *ecs, EcsSystemType type);
-ECSDEF void      ecs_run_system(Ecs *ecs, uint32_t system_index);
+ECSDEF void      ecs_run_systems(Ecs *ecs, EcsSystemType type,GameState *state);
+ECSDEF void      ecs_run_system(Ecs *ecs, uint32_t system_index,GameState *state);
 ECSDEF uint32_t  ecs_for_count(Ecs *ecs);
 ECSDEF EcsEnt    ecs_get_ent(Ecs *ecs, uint32_t index);
 ECSDEF EcsEnt    ecs_ent_make(Ecs *ecs);
@@ -326,19 +328,19 @@ ecs_register_system(Ecs *ecs, ecs_system_func func, EcsSystemType type)
 }
 
 ECSDEF void
-ecs_run_systems(Ecs *ecs, EcsSystemType type)
+ecs_run_systems(Ecs *ecs, EcsSystemType type,GameState *state)
 {
     for (uint32_t i = 0; i < ecs->systems_top; i++)
     {
         EcsSystem *sys = &ecs->systems[i];
-        if (sys->type == type) sys->func(ecs);
+        if (sys->type == type) sys->func(ecs,state);
     }
 }
 
 ECSDEF void
-ecs_run_system(Ecs *ecs, uint32_t system_index)
+ecs_run_system(Ecs *ecs, uint32_t system_index,GameState *state)
 {
-    ecs->systems[system_index].func(ecs);
+    ecs->systems[system_index].func(ecs,state);
 }
 
 ECSDEF uint32_t        

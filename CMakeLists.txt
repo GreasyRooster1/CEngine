@@ -40,6 +40,7 @@ add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
 		src/game/player.h
 		src/cengine/game/prelude.h
 		src/cengine/renderer/prelude.h
+		src/cengine/util/prelude.c
 )
 
 

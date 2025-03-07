@@ -8,7 +8,7 @@
 
 #define MOVEMENT_SYSTEM_MASK \
 ECS_MASK(2, COMPONENT_POSITION, COMPONENT_VELOCITY)
-void apply_velocity_system(Ecs *ecs){
+void apply_velocity_system(Ecs *ecs,GameState *state){
     for (u32 i = 0; i < ecs_for_count(ecs); i++)
     {
         EcsEnt e = ecs_get_ent(ecs, i);
@@ -25,7 +25,7 @@ void apply_velocity_system(Ecs *ecs){
 
 #define SPRITE_RENDER_SYSTEM_MASK \
 ECS_MASK(2, COMPONENT_POSITION, COMPONENT_SPRITE)
-void sprite_render_system(Ecs *ecs){
+void sprite_render_system(Ecs *ecs,GameState *state){
     for (u32 i = 0; i < ecs_for_count(ecs); i++)
     {
         EcsEnt e = ecs_get_ent(ecs, i);
