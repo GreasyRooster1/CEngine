@@ -51,6 +51,7 @@ void register_components(Ecs *ecs){
 
 void register_systems(Ecs *ecs){
     //Systems are run in order
+    ecs_register_system(ecs, player_move_system, ECS_SYSTEM_UPDATE);
     ecs_register_system(ecs, apply_velocity_system, ECS_SYSTEM_UPDATE);
     ecs_register_system(ecs, sprite_render_system, ECS_SYSTEM_RENDER);
 }
