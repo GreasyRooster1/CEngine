@@ -3,6 +3,7 @@
 //
 #define ECS_IMPLEMENTATION
 #include "util/util.h"
+#include "game/gamestate.h"
 
 typedef struct
 {
@@ -79,7 +80,7 @@ void register_systems(Ecs *ecs){
     ecs_register_system(ecs, sprite_render_system, ECS_SYSTEM_RENDER);
 }
 
-void setup(){
+void setup(GameState *state){
     Ecs *ecs = ecs_make(1000, COMPONENT_COUNT, 3);
     register_components(ecs);
     register_systems(ecs);
@@ -92,10 +93,10 @@ void setup(){
 }
 
 
-void pre_loop(){
+void pre_loop(GameState *state){
 
 }
 
-void post_loop(){
+void post_loop(GameState *state){
 
 }

@@ -28,8 +28,8 @@ add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
         src/game.c
 		src/renderer/renderer.c
 		src/renderer/renderer.h
-		src/game/gameutil.c
-		src/game/gameutil.h
+        src/game/gamesetup.c
+        src/game/gamesetup.h
 		src/game.h
 		src/game/gamestate.c
 		src/game/gamestate.h)
