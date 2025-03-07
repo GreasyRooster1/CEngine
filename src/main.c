@@ -17,7 +17,7 @@ int main() {
 
     start_game();
 
-	while (!glfwWindowShouldClose(window)) {
+	while () {
 		processInput(window);
 
 		glClearColor(0.2f, 0.3f, 0.3f, 1.0f);

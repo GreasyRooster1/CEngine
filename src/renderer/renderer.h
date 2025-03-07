@@ -5,6 +5,9 @@
 #ifndef CENGINE_RENDERER_H
 #define CENGINE_RENDERER_H
 
+#include "GLFW/glfw3.h"
+
 void cleanup_renderer();
+bool is_window_alive(GLFWwindow *window);
 
 #endif //CENGINE_RENDERER_H
