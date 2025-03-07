@@ -90,6 +90,8 @@ void setup(GameState *state){
     CVelocity velocity = {5, 0};
     ecs_ent_add_component(ecs, e, COMPONENT_POSITION, &xform);
     ecs_ent_add_component(ecs, e, COMPONENT_VELOCITY, &velocity);
+
+    state->ecs = ecs;
 }
 
 

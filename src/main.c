@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include "window.h"
+#include "game/gamesetup.h"
 
 void processInput(GLFWwindow *window);
 void render_loop();
@@ -13,6 +14,8 @@ const unsigned int SCR_HEIGHT = 600;
 int main() {
 
 	GLFWwindow* window = create_window(SCR_WIDTH,SCR_HEIGHT);
+
+    start_game();
 
 	while (!glfwWindowShouldClose(window)) {
 		processInput(window);

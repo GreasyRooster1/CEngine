@@ -24,7 +24,7 @@ add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
 		src/window.h
 		src/util/types.h
         src/util/uthash.h
-		src/util/ecs.h
+		src/game/ecs.h
         src/game.c
 		src/renderer/renderer.c
 		src/renderer/renderer.h

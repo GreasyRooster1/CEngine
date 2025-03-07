@@ -6,12 +6,12 @@
 #define CENGINE_GAMESTATE_H
 
 #include <stdbool.h>
-#include "../util/ecs.h"
+#include "ecs.h"
 
 typedef struct{
     bool updating;
     bool rendering;
-    Ecs ecs
+    Ecs *ecs;
 } GameState;
 
 #endif //CENGINE_GAMESTATE_H
