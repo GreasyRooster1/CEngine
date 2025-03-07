@@ -8,6 +8,8 @@
 #include <malloc.h>
 #include "../util/types.h"
 
+#define QUAD_MESH
+
 typedef struct{
     u32 VAO;
     u32 shaderId;
@@ -16,6 +18,8 @@ typedef struct{
 
 Sprite* create_sprite(){
     Sprite *sprite = malloc(sizeof(sprite));
+
+
 
     return sprite;
 }
