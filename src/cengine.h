@@ -5,8 +5,6 @@
 #ifndef CENGINE_H
 #define CENGINE_H
 
-#define ECS_IMPLEMENTATION
-
 #include "game/ecs.h"
 #include "renderer/renderer.h"
 #include "util/util.h"

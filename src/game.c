@@ -1,6 +1,7 @@
 //
 // Created by dillo on 3/6/2025.
 //
+#define ECS_IMPLEMENTATION
 #include "cengine.h"
 
 typedef struct

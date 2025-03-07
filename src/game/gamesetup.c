@@ -4,7 +4,6 @@
 
 #include <stdio.h>
 #include "gamesetup.h"
-#include "../util/util.h"
 #include "gamestate.h"
 #include "../renderer/renderer.h"
 
@@ -44,5 +43,5 @@ void update(GameState *state){
 }
 
 void cleanup_game(){
-    cleanup_renderer()
+    cleanup_renderer();
 }

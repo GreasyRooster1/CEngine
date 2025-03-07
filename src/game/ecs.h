@@ -26,22 +26,7 @@
 #define ECS_FREE free
 #endif
 
-typedef uint64_t EcsEnt;
-typedef uint32_t EcsComponentType;
-
-#define ECS_MASK(ctypes_count, ...) \
-    ctypes_count, (EcsComponentType[]){__VA_ARGS__}
-
-typedef enum
-{
-    ECS_SYSTEM_UPDATE,
-    ECS_SYSTEM_RENDER
-} EcsSystemType;
-
-typedef struct Ecs Ecs;
-
-typedef void (*ecs_system_func)(struct Ecs *ecs);
-typedef void (*ecs_component_destroy)(void *data);
+#include "ecstypes.h"
 
 ECSDEF Ecs*      ecs_make(uint32_t max_entities, uint32_t component_count, uint32_t system_count);
 ECSDEF void      ecs_destroy(Ecs *ecs);
@@ -68,7 +53,6 @@ ECSDEF bool      ecs_ent_is_valid(Ecs *ecs, EcsEnt e);
 ECSDEF uint32_t  ecs_ent_get_version(Ecs *ecs, EcsEnt e);
 ECSDEF void      ecs_ent_print(Ecs *ecs, EcsEnt e);
 
-#endif
 
 
 
@@ -502,4 +486,5 @@ ecs_ent_print(Ecs *ecs, EcsEnt e)
 }
 
 
+#endif
 #endif
