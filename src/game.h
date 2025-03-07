@@ -5,8 +5,8 @@
 #ifndef CENGINE_GAME_H
 #define CENGINE_GAME_H
 
-#include "cengine.h"
-#include "game/gamestate.h"
+#include "cengine/cengine.h"
+
 
 void setup(GameState *state);
 void update(GameState *state);

@@ -2,7 +2,7 @@
 // Created by dillo on 3/6/2025.
 //
 #define ECS_IMPLEMENTATION
-#include "cengine.h"
+#include "cengine/cengine.h"
 
 typedef struct
 {
@@ -71,10 +71,7 @@ void register_components(Ecs *ecs){
 }
 
 void register_systems(Ecs *ecs){
-    //ecs_run_systems will run the systems in the order they are registered
-    //ecs_run_system is also available if you wish to handle each system seperately
-    //
-    //Ecs, function pointer to system (must take a parameter of Ecs), system type
+    //Systems are run in order
     ecs_register_system(ecs, apply_velocity_system, ECS_SYSTEM_UPDATE);
     ecs_register_system(ecs, sprite_render_system, ECS_SYSTEM_RENDER);
 }

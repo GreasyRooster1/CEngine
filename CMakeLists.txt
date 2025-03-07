@@ -18,23 +18,23 @@ file(GLOB_RECURSE HEADER_FILES
 )
 
 add_executable(${PROJECT_NAME} ${HEADER_FILES} ${SOURCE_FILES}
-		src/renderer/window.c
-		src/util/util.c
-		src/util/util.h
-		src/renderer/window.h
-		src/util/types.h
-        src/util/uthash.h
-		src/game/ecs.h
+		src/cengine/renderer/window.c
+		src/cengine/util/util.c
+		src/cengine/util/util.h
+		src/cengine/renderer/window.h
+		src/cengine/util/types.h
+		src/cengine/util/uthash.h
+		src/cengine/game/ecs.h
         src/game.c
-		src/renderer/renderer.c
-		src/renderer/renderer.h
-        src/game/gamesetup.c
-        src/game/gamesetup.h
+		src/cengine/renderer/renderer.c
+		src/cengine/renderer/renderer.h
+		src/cengine/game/gamesetup.c
+		src/cengine/game/gamesetup.h
 		src/game.h
-		src/game/gamestate.c
-		src/game/gamestate.h
-		src/cengine.h
-		src/game/ecstypes.h)
+		src/cengine/game/gamestate.c
+		src/cengine/game/gamestate.h
+		src/cengine/cengine.h
+		src/cengine/game/ecstypes.h)
 
 
 # Find the Required Packages (if Any -> OpenGL/Vulkan or Any)

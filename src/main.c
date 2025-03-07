@@ -1,16 +1,11 @@
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
-
 #include <stdio.h>
-#include "renderer/window.h"
-#include "cengine.h"
+#include "cengine/cengine.h"
 
 void processInput(GLFWwindow *window);
 void render_loop();
 
 int main() {
-
+    printf("%s\n","Game starting...");
     start_game();
-
 	return 0;
 }

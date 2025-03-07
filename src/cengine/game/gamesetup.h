@@ -5,7 +5,7 @@
 #ifndef CENGINE_GAMESETUP_H
 #define CENGINE_GAMESETUP_H
 
-#include "../game.h"
+#include "../../game.h"
 
 void start_game();
 
