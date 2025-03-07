@@ -91,8 +91,14 @@ void setup(GameState *state){
     ecs_ent_add_component(ecs, e, COMPONENT_VELOCITY, &velocity);
 
     state->ecs = ecs;
-    state->window = create_window(SCR_WIDTH,SCR_HEIGHT);
+    state->window = create_window(800,600);
 }
+
+void processInput(GLFWwindow *window) {
+    if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS)
+        glfwSetWindowShouldClose(window, true);
+}
+
 
 void update(GameState *state){
 
