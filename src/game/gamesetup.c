@@ -8,6 +8,8 @@
 #include "../renderer/renderer.h"
 
 
+void main_loop(GameState *state);
+
 void start_game(){
     GameState state = {
             true,true,NULL
@@ -22,16 +24,14 @@ void start_game(){
         #ifdef GAME_PRELOOP
             pre_loop(&state);
         #endif
-        #ifdef GAME_UPDATE
-            update();
-        #endif
+        main_loop(&state);
         #ifdef GAME_POSTLOOP
             pre_loop(&state);
         #endif
     }
 }
 
-void update(GameState *state){
+void main_loop(GameState *state){
     if (state->updating)
     {
         ecs_run_systems(state->ecs, ECS_SYSTEM_UPDATE);

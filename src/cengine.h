@@ -2,8 +2,8 @@
 // Created by QuantumDeity on 3/6/2025.
 //
 
-#ifndef CENGINE_H
-#define CENGINE_H
+#ifndef CENGINE_MASTER_H
+#define CENGINE_MASTER_H
 
 #include "game/ecs.h"
 #include "renderer/renderer.h"
@@ -11,4 +11,4 @@
 #include "game/gamesetup.h"
 #include "game/gamestate.h"
 
-#endif //CENGINE_H
+#endif //CENGINE_MASTER_H

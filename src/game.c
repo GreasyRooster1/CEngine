@@ -93,6 +93,9 @@ void setup(GameState *state){
     state->ecs = ecs;
 }
 
+void update(GameState *state){
+
+}
 
 void pre_loop(GameState *state){
 
