@@ -5,6 +5,7 @@
 #ifndef CENGINE_FILE_H
 #define CENGINE_FILE_H
 
-void read_file(char *name,char buffer[],int buffer_size);
+void read_file_buf(char *name,char buffer[],int buffer_size);
+int get_file_size(FILE *file);
 
 #endif //CENGINE_FILE_H
