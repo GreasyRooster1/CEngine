@@ -5,6 +5,7 @@
 #ifndef CENGINE_RENDERER_H
 #define CENGINE_RENDERER_H
 
+#include <glad/glad.h>
 #include "GLFW/glfw3.h"
 
 void cleanup_renderer();

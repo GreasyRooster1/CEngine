@@ -8,7 +8,12 @@
 #include <malloc.h>
 #include "../util/types.h"
 
-#define QUAD_MESH
+const f32 QUAD_MESH[12] = {
+    -1, -1, 0, // bottom left corner
+    -1,  1, 0, // top left corner
+    1,  1, 0, // top right corner
+    1, -1, 0
+};
 
 typedef struct{
     u32 VAO;
@@ -16,12 +21,7 @@ typedef struct{
     u32 textureId;
 }Sprite;
 
-Sprite* create_sprite(){
-    Sprite *sprite = malloc(sizeof(sprite));
+Sprite* create_sprite();
 
-
-
-    return sprite;
-}
 
 #endif //CENGINE_SPRITE_H

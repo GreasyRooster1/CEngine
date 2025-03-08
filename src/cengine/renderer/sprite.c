@@ -3,3 +3,11 @@
 //
 
 #include "sprite.h"
+
+Sprite* create_sprite(){
+    Sprite *sprite = malloc(sizeof(sprite));
+
+
+
+    return sprite;
+}
