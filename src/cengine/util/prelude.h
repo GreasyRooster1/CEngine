@@ -8,6 +8,7 @@
 #include "types.h"
 #include "uthash.h"
 #include "types.h"
+#include "file.h"
 #include <process.h>
 
 void die(int exit_code);

@@ -7,5 +7,6 @@
 
 #include "renderer.h"
 #include "window.h"
+#include "sprite.h"
 
 #endif //CENGINE_RENDERER_PRELUDE_H

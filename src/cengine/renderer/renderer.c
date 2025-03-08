@@ -1,10 +1,11 @@
 //
 // Created by dillo on 3/6/2025.
 //
-
+#include "glad.h"
 #include <stdbool.h>
 #include "renderer.h"
 #include "../util/types.h"
+
 
 void setup_renderer(){
     glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
