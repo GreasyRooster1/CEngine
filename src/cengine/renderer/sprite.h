@@ -8,7 +8,7 @@
 #include <malloc.h>
 #include "../util/types.h"
 
-f32 QUAD_MESH[12];
+//f32 QUAD_MESH[12];
 
 typedef struct{
     u32 VAO;

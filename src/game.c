@@ -63,7 +63,7 @@ void setup(GameState *state){
     state->ecs = ecs;
     state->window = create_window(800,600);
 
-    new_player_arch(state);
+    //new_player_arch(state);
 }
 
 void processInput(GLFWwindow *window) {

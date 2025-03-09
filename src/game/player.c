@@ -27,7 +27,7 @@ EcsEnt new_player_arch(GameState *state){
     CPlayer cPlayer = {};
     CPosition cPosition = {0,0};
     CSprite cSprite = {0,0};
-    ecs_ent_add_component(state->ecs,entity,COMPONENT_PLAYER,&cPlayer);
+    //ecs_ent_add_component(state->ecs,entity,COMPONENT_PLAYER,&cPlayer);
     ecs_ent_add_component(state->ecs,entity,COMPONENT_POSITION,&cPosition);
     ecs_ent_add_component(state->ecs,entity,COMPONENT_SPRITE,&cSprite);
     return entity;
